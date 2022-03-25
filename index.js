@@ -1,9 +1,36 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const str = word;
+  const strArray = [...str]
+  const newWord = wordReverse(strArray)
+
+  if(word === newWord) {
+    return true
+  } else {
+    return false
+  }
 }
+
+// function arrayMaker(word) {
+// const str = word;
+// const strArray = [...str]
+// console.log(strArray)
+// wordReverse(strArray)
+// }
+
+function wordReverse(letters) {
+const reversedWord = letters.reverse()
+const finishedWord = reversedWord.join("")
+return finishedWord
+}
+
+// isPalindrome('mome')
+
 
 /* 
   Add your pseudocode here
+  isPalindrome() takes in a string.
+  assign variable to wordReverse() whos that return value is the string reversed.
+  write an if statement that if argument passed into IsPalindrome is equal to retunred value of wordReverse, return true
 */
 
 /*
